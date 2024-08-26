@@ -1,0 +1,357 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Grechen+Fuemen&family=Ruthie&family=Salsa&display=swap");
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #e5e5f7;
+  background-image: radial-gradient(#444cf7 0.65px, #e5e5f7 0.65px);
+  background-size: 13px 13px;
+  position: relative;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+/* Navbar */
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
+  font-family: "Grechen Fuemen", cursive;
+}
+
+.navbar ul li a {
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+.navbar ul li a:hover {
+  opacity: 0.8;
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #fff;
+  opacity: 0.6;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Heading Styles */
+#caffeine-heading {
+  font-family: "Grechen Fuemen", cursive;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+}
+
+#caffeine-heading:hover {
+  opacity: 0.8;
+}
+
+#caffeine-heading::after {
+  content: "";
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #fff;
+  opacity: 0.6;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+#caffeine-heading:hover::after {
+  transform: scaleX(1);
+}
+
+/* Landing Page */
+.landing {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  z-index: 0;
+}
+
+.landing::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.landing h1,
+.landing h3,
+#menu h1,
+#menu h3 {
+  color: #dfdfdf;
+  text-align: center;
+}
+
+.landing h1 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 3rem;
+}
+
+.landing h3 {
+  font-family: "Grechen Fuemen", cursive;
+  font-size: 2rem;
+  color: #bb9356;
+}
+
+.landing p {
+  font-family: "Grechen Fuemen", cursive;
+  font-size: 1.2rem;
+  color: #bfbdbd;
+  font-weight: 700;
+  text-align: center;
+  max-width: 60vw;
+  margin-bottom: 1rem;
+}
+
+.carousel-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 98%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.carousel-buttons button {
+  padding: 0.5rem;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.carousel-buttons button:hover {
+  color: #bb9356;
+}
+
+/* Menu */
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 6rem 1rem;
+  min-height: 100vh;
+}
+
+.menu-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.menu-item-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff;
+  position: relative;
+  height: 250px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.menu-item-info h2 {
+  font-family: "Abril Fatface", cursive;
+  font-weight: 400;
+}
+
+.menu-item-info::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px dashed #000;
+  height: calc(100% - 1rem);
+  width: calc(100% - 1rem);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.menu-item-info:hover::after {
+  opacity: 0.2;
+}
+
+.menu-item-image {
+  position: relative;
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.menu-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-item-image .icon,
+.menu-item-image .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-item-image .icon {
+  color: #000;
+  z-index: 5;
+  height: 0;
+  width: 0;
+}
+
+.menu-item-image .overlay {
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.menu-item-image:hover .overlay {
+  width: 200%;
+  height: 200%;
+}
+
+.menu-item-image:hover .icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+/* Detailed Menu Item */
+.menu-item-detailed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 0;
+  width: 80vmin;
+  max-width: 400px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 10;
+}
+
+.menu-item-detailed.active {
+  height: 70vh;
+  opacity: 1;
+}
+
+.menu-item-detailed .bottom-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #dfdfdf;
+  backdrop-filter: blur(2px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bottom-content h2 {
+  font-family: "Abril Fatface", cursive;
+  color: #000;
+}
+
+.bottom-content p {
+  font-size: 1rem;
+}
+
+.menu-item-detailed button.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 1rem;
+  border: none;
+}
